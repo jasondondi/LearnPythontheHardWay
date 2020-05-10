@@ -1,27 +1,22 @@
-# initializes the argv which accepts execution arguments
+# import the argv module from sys
 from sys import argv
 
-# tells the program that the execution argument goes in the "filename" var
+# the arguments to python are "script", then "filename"
 script, filename = argv
 
-# the variable txt will be filled with the contents of the file
-# filename is filled with the name of the file from the execution arg
-# and this fills the txt variable with that.
+#the variable "txt" gets filled with whatever is in
+#  filename.
+
 txt = open(filename)
 
-# %r gets filled with 'filename' and prints the line
-print "Here's your file %r:" % filename
-# txt is the contents of the file. read... uh... reads the variable contents?
-print txt.read()
+# filename came from the argv.
+#  print txt. read makes it read.
+print(f"Here's your file {filename}:")
+print(txt.read())
 
-# displays a string that will be used as the promprt for user input
-print "Type the filename again:"
-# ask for raw_input and put the result in file_again
-file_again = raw_input(">" )
+print("Type the filename again:")
+file_again = input("> ")
 
-# now we take the file_again input from the prompt
-# and open the file into the txt_again variable
 txt_again = open(file_again)
 
-# and now we push txt.again to the read() function
-print txt_again.read()
+print(txt_again.read())

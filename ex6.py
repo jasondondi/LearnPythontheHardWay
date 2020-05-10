@@ -1,37 +1,24 @@
-# Set a variable 'x' to be the statement
-# There are 10 types of people. Where most of it is in the quoted literal,
-# and %d takes the information provided at the end, which is 10. 
+types_of_people = 10
+x = f"There are {types_of_people} types of people."
 
-x = "There are %d types of people." % 10
-
-
-#fill a variable named binary with the word 'binary'
 binary = "binary"
-do_not = "don't" 
-# %d pulls digit, %s pulls string. What was %r called?
-y = "Those who know %s and those who %s." % (binary, do_not)
+do_not = "don't"
+y =  f"Those who know {binary} and those who {do_not}."
 
-print x
-print y
+print(x)
+print(y)
 
-print "I said: %r." % x
-print "I also said: '%s'." % y
+print(f"I said: {x}")
+print(f"I also said: '{y}'")
 
 hilarious = False
-joke_evaluation = "Isn't that joke so funny?! %r"
+joke_evaluation = "Isn't that joke so funny?! {}"
 
-# This shows how I can store a string into a variable, 
-# store a... whatever %r is, and call them like this 
-
-print joke_evaluation % hilarious
+print(joke_evaluation.format(hilarious))
 
 w = "This is the left side of..."
 e = "a string with a right side."
 
-#jams the two variables together with no extra spacing added.
-print w + e
-
-#The difference between %r (raw) and %s (string): 
-# We use %r for debugging because it displas the 'raw' data of the variable. 
-# but we use %s and others for displaying to users. 
-
+print(w + e)
+# This one cats the two variables together without
+#  adding an extra space between like the commas did.
