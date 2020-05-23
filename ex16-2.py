@@ -4,7 +4,5 @@ script, filename = argv
 
 txt = open(filename)
 
-print("Here's your file: %r") % txt
-print txt.read()
-
-
+print(f"Here's your file {filename}:")
+print(txt.read())

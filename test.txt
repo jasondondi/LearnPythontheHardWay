@@ -1,0 +1,3 @@
+another set of words
+words on multiple lines
+but only one target.write call
